@@ -1,0 +1,284 @@
+body{
+    margin: 0;
+    min-width: 1366px;
+
+}
+
+
+/*页面1 样式*/
+.first{
+    background: skyblue;
+}
+
+/*由于 全屏插件帮我们多生成了一个 div 在first下放所以 我们需要为他添加 display:flex;*/
+.first>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first .logo{
+    background: url('../images/logo.png');
+    width: 251px;
+    height: 186px;
+}
+
+.first .text{
+    margin-top: 20px;
+}
+.first .text img{
+    margin: 0 30px;
+    opacity: 0;
+}
+
+.first .info{
+    background:url('../images/info_1.png');
+    width: 772px;
+    height: 49px;
+    margin-top: 20px;
+}
+/*页面1的动画效果*/
+
+.first.animated .text img{
+    margin: 0;
+    opacity: 1;
+    transition: all 1s;
+}
+
+
+/*页面2*/
+.second{
+    background: yellowgreen;
+}
+
+.second>div{
+    display: flex;
+}
+
+.second .shield{
+    width: 500px;
+    height: 100%;
+    margin-left: 50px;
+}
+
+.second .shield img:nth-child(3){
+    transform: rotateZ(45deg) translate(100px,200px);
+}
+
+.second .info{
+    background: url('../images/info_2.png');
+    width: 635px;
+    height: 309px;
+}
+
+/* 页面2添加动画效果*/
+.second.animated .shield img:nth-child(3){
+     transform: rotateZ(0deg) translate(0px,0px);
+     transition: all 1s;
+}
+
+
+/*页面3*/
+.third{
+    background:hotpink;
+}
+.third>div{
+    display: flex;
+    position: relative;
+}
+
+.third .info{
+    background: url('../images/info_3.png');
+    width: 631px;
+    height: 278px;
+}
+.third .circle{
+    background: url('../images/circle.png');
+    width: 453px;
+    height: 449px;
+    margin-left: 100px;
+}
+
+.third .rocket{
+    background: url('../images/rocket.png');
+    width: 203px;
+    height: 204px;
+    position: absolute;
+    left:0px;
+    bottom:0px;
+    transform: translateX(-203px);
+}
+
+.third.animated .rocket{
+    transform: translate(860px,-230px);
+    transition: all 1s;
+}
+
+/*页面4*/
+.fourth{
+    background:purple;
+}
+.fourth>div{
+    display: flex;
+    
+}
+
+.fourth .searchBar{
+    flex:1;
+    margin-top: 100px;
+    position: relative;
+    transform: translateX(-1000px);
+}
+
+.fourth .searchBar .search{
+    background: url('../images/search.png');
+    width: 529px;
+    height: 66px;
+    position: absolute;
+}
+.fourth .searchBar .key{
+    background: url('../images/key.png');
+    height: 22px;
+    position: absolute;
+    left:20px;
+    top:23px;
+    width: 0;
+}
+
+.fourth .searchBar .result{
+    background: url('../images/result.png');
+    width: 529px;
+    height: 0px;
+    position: absolute;
+    top:60px;
+}
+
+.fourth .info{
+    flex:1;
+    background: url('../images/info_4.png') no-repeat center;
+}
+
+
+/*页面4的 动画效果*/
+
+.fourth.animated .searchBar{
+    transform: translateX(0px);
+    transition: all 1s;
+}
+
+.fourth.animated .key{
+    width: 99px;
+    transition: all 1.5s 2s;
+    transition-timing-function: steps(5,end);
+}
+
+
+.fourth.animated .result{
+    height: 372px;
+    transition: all 2s 3.5s;
+}
+
+/*页面5*/
+.fifth{
+    background:brown;
+}
+
+.fifth>div{
+    display: flex;
+    flex-direction: column;
+/*    左右居中*/
+    align-items: center;
+}
+.fifth .info{
+    background: url('../images/info_5.png');
+    width: 1077px;
+    height: 134px;
+    margin-top: -150px;
+}
+
+.fifth .browser{
+    width: 1004px;
+/*    height: 100%;*/
+    flex:1;
+    
+    position: relative;
+}
+
+.fifth .browser .toolBar{
+    background: url('../images/toolbar.png');
+    width: 1004px;
+    height: 79px;
+}
+
+.fifth .browser .extra{
+    background: url('../images/extra.png');
+    width: 394px;
+    height: 29px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+/*设置 四条线段*/
+.fifth .line{
+    position: absolute;
+    background-color: white;
+}
+
+.fifth .top{
+    width: 100%;
+    height: 10px;
+    top:0px;
+    transform: translateX(2000px);
+}
+
+.fifth .bottom{
+    width: 100%;
+    height: 10px;
+    bottom:0px;
+    transform: translateX(-2000px);
+}
+
+.fifth .right{
+    height: 100%;
+    width: 10px;
+    right:0px;
+    top:0px;
+    transform: translateY(2000px);
+}
+.fifth .left{
+    height: 100%;
+    width: 10px;
+    left:0px;
+    top:0px;
+    transform: translateY(-2000px);
+    opacity: 0;
+}
+
+
+/*动画效果*/
+
+
+.fifth.animated .top{
+    transform: translate(0);
+    transition: all 1s;
+}
+.fifth.animated .bottom{
+    transform: translate(0);
+    transition: all 1s;
+}
+.fifth.animated .left{
+    transform: translate(0);
+    transition: all 1s;
+     opacity: 1;
+}
+.fifth.animated .right{
+    transform: translate(0);
+    transition: all 1s;
+}
+
+
+
+
+
+
